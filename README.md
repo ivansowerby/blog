@@ -5,9 +5,7 @@ Revision for 0.0.1
 ### List of Contents:
 1. Find on the Web
 2. Citation
-3. License 
-
----
+3. License
 
 ### Find on the Web
 

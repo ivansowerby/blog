@@ -19,8 +19,8 @@ Blog found at [ivan.engineer/blog](https://ivan.engineer/blog)
 ---
 
 *Free to Use, but...*
-In-text citations are required, 
-s
+In-text citations are required,
+
 Insert `Ivan Sowerby, <https://ivan.engineer/blog/[BLOG ID]>`, visible in the body of the publication (media) preferably close to the reference, replacing `[BLOG ID]` with ID of the blog, which is found at any of:
 * In the URL (bar), i.e. the ID found where `[BLOG ID]` is shown in `ivan.engineer/blog/[BLOG ID]`
 * The landing page of [ivan.engineer/blog](https://ivan.engineer/blog), next to the title of each blog

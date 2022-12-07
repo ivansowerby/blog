@@ -1,6 +1,6 @@
 # Blog
 
-Revision for 0.0.1
+Revision for 0.0.4
 
 ### List of Contents:
 1. Find on the Web
@@ -26,7 +26,7 @@ Insert `Ivan Sowerby, <https://ivan.engineer/blog/[BLOG ID]>`, visible in the bo
 * The landing page of [ivan.engineer/blog](https://ivan.engineer/blog), next to the title of each blog
 * Beneath the title of each blog's page
 
-I, Ivan Sowerby, neither endorse any media upon which my blogs may be cited (unless specified otherwise), nor hold liability for claims, damages and other liability due to (but not limited to) misappropriation, adaptations. Blogs are provided 'as is'.
+I, Ivan Sowerby, neither endorse any media upon which my blogs may be cited (unless specified otherwise), nor hold liability for claims, damages and other liability due to (but not limited to) citations and adaptations. Blogs are provided 'as is'.
 
 
 ### License

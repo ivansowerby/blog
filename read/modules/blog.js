@@ -59,7 +59,7 @@ $().ready(() => {
         window.error.newMessage(
             "missing hash parameter",
             "the entered URL must include a hash query parameter, corresponding to the hash of the related file (blog), as per  the index.(json)",
-            ".../blog/read/?hash=<REPLACE-WITH-HASH>"
+            ".../read/?hash=<REPLACE-WITH-HASH>"
         );
     }
 });

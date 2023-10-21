@@ -1,0 +1,10 @@
+{
+    "unfriendly": {
+        "classes": [
+            "mobile-unfriendly"
+        ],
+        "thresholds": {
+            "width": 800
+        }
+    }
+}

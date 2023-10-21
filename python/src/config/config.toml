@@ -1,0 +1,22 @@
+[openai]
+model = "gpt-3.5-turbo-16k"
+max-tokens = 16384
+api-key = "YOUR_API_KEY"
+
+[openai.preference]
+#For deciding which version of the blog will be "fed" into the (OpenAI) AI model (for description), useful to save tokens or gain extra descriptive data!
+#if `true` then the ORIGINAL (blog) file (will be used)
+#if `false` then the OUTPUT of the TRANSLATOR (will be used)
+describe-original = true
+
+[openai.role.system]
+statement = "For each following propmt, a markdown document will be give. Extract the `title`, `author`, and suggest a short `blurb` from this. Present this as JSON - minimized without newlines, where the keys are lowercase. With no extra characters, words, or padding."
+
+[translator.settings]
+selectors = [
+    "--translate", #--translate[--flag](data)
+    "!$" #$[--flag](data)
+]
+
+[translator.output]
+format = ".out.md" #[example].out.md

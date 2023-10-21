@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+:root {
+    --background-color: #202020;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    color: white;
+    background-color: var(--background-color);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20px;
+    background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0));
+}
+
+#background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: var(--background-color);
+}
+
+.library-container {
+    margin: auto;
+    width: min(100vw, 900px);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    background-color: var(--background-color);
+}
+
+.section-item  {
+
+}
+
+.title-container {
+    margin: auto;
+    width: fit-content;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#icon-button {
+    padding: 0;
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    background: none;
+    border: none;
+}
+
+#icon {
+    height: 70px;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    border-radius: 10px;
+}
+
+#icon-button:focus {
+    outline: none;
+}
+
+#icon:hover, #icon-button:focus > #icon {
+    outline: solid white 2px;
+}
+
+#title {
+
+}
+
+.shelf-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-container {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "⬅️ ➡️ ➡️"
+                         "⬇️ ⬇️ ⬇️"
+                         "▪️ ▪️ ▪️";
+    gap: 10px;
+    background-color: #404040;
+    opacity: 30%;
+    box-sizing: border-box;
+    outline: solid black 2px;
+    border-radius: 10px;
+}
+
+.book-container:hover, .book-container:focus {
+    opacity: 100%;
+    outline: solid white 2px;
+}
+
+.book-container > div {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.book-container > div:not(.book-item-bottom) {
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.book-item-left {
+    grid-area: ⬅️;
+}
+
+.book-item-right {
+    grid-area: ➡️;
+}
+
+.book-item-middle {
+    grid-area: ⬇️;
+}
+
+.book-item-key {
+    background-color: #404040;
+    font-weight: lighter;
+    border-radius: 5px 5px 0 0;
+    user-select: none;
+}
+
+.book-item-value {
+    box-sizing: border-box;
+    border: solid #404040 3px;
+    border-radius: 0 0 5px 5px;
+}
+
+.book-item-value:not(.filepath, .hash) {
+    overflow-wrap: break-word;
+    font-size: 20px;
+    user-select: none;
+}
+
+.book-item-value.hash, .book-item-value.filepath {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.book-container > .book-item-bottom {
+    width: 100%;
+    grid-area: ▪️;
+    display: none;
+    flex-direction: row;
+    opacity: 0%;
+}
+
+.book-container:hover .book-item-bottom, .book-container:focus .book-item-bottom {
+    animation: appear 500ms forwards;
+    display: flex;
+}
+
+@keyframes appear {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+
+.book-item-bottom > div {
+    padding: 5px;
+    width: 100%;
+    background-color: #202020;
+    border-radius: 10px;
+}
+
+.book-item-button {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copyright {
+    position: fixed;
+    padding: 5px;
+    margin: 10px;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 90%;
+    cursor: pointer;
+}

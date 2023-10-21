@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Gelasio&display=swap');
+
+:root {
+    --background-color: #202020;
+    --container-width: min(calc(100% - 44px), 900px);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    color: white;
+    background-color: var(--background-color);
+    letter-spacing: 0.5px;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20px;
+    background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0));
+    z-index: 3;
+}
+
+@keyframes appear {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+
+.layout-container {
+    display: grid;
+    grid-template-columns: auto var(--container-width) auto;
+}
+
+.tool-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #101010;
+    border-radius: 0 0 15px 0;
+}
+
+.tool-item > button {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: 100px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.tool-item img {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    background-color: #606060;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.tool-item > button:focus {
+    outline: none;
+}
+
+.tool-item img:hover, .tool-item > button:focus img {
+    background-color: white;
+    border: solid white 2px;
+}
+
+.error-container {
+    width: 100%;
+    height: calc(100vh - 4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-y: scroll;
+}
+
+.error-item:first-child {
+    color: red !important;
+    font-weight: bolder;
+}
+
+.error-item {
+    margin-inline: auto;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color: var(--background-color);
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: var(--container-width);
+    height: 120px;
+    background-color: var(--background-color);
+    z-index: 2;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #101010;
+    box-sizing: border-box;
+    border: solid white 2px;
+    border-radius: 15px 15px 0 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.header-item {
+    margin: auto;
+    padding-inline: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-color);
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+.status {
+    max-width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: help;
+}
+
+.status-image {
+    height: 40px;
+    filter: contrast(1) invert(1);
+}
+
+.status-state {
+    margin: 0;
+    display: none;
+    font-weight: bolder;
+    user-select: none;
+}
+
+.status:hover > .status-state {
+    display: inline;
+}
+
+.blog-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    font-size: 1.25em;
+    font-family: 'Gelasio', sans-serif;
+}
+
+.blog-item {
+    padding-inline: 20px;
+    width: 100%;
+    min-height: 100vh;
+    align-self: center;
+    background-color: #101010;
+    box-sizing: border-box;
+    border: solid white 2px;
+    border-radius: 15px;
+}
+
+.top-blog-item {
+    border-top: none !important;
+    border-radius: 0 0 15px 15px !important;
+}
+
+.heading-container {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.heading-container > div {
+    display: none;
+}
+
+.heading-container:hover > div {
+    display: inline;
+    z-index: 1;
+}
+
+.heading-fragment-button {
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.heading-fragment-button > img {
+    width: 40px;
+    filter: contrast(1) invert(1);
+}
+
+.giphy {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.giphy > iframe {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    border: none;
+    border-radius: 10px;
+}
+
+.content-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    max-width: 300px;
+    width: fit-content;
+    display: none;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: #101010;
+    border-radius: 0 15px 15px 0;
+}
+
+.content-container > .heading {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.fragment-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fragment-container > button {
+    padding: 0;
+    width: fit-content;
+    border: none;
+    background: none;
+}
+
+.fragment-container > button:focus {
+    outline: none;
+}
+
+.fragment-container > button:focus .fragment-item > .heading {
+    text-decoration: underline;
+}
+
+.fragment-item {
+    margin: 0;
+    padding: 5px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1ch;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fragment-item > .heading, .fragment-item > .heading-prefix {
+    margin: 0;
+    padding: 0;
+}
+
+.fragment-item > .heading-prefix {
+    color: #606060;
+}
+
+.fragment-item > .heading {
+    color: white;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.fragment-item:hover > .heading {
+    text-decoration: underline;
+}
+
+#copyright {
+    position: fixed;
+    padding: 5px;
+    margin: 10px;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 90%;
+    cursor: pointer;
+}

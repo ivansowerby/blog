@@ -1,0 +1,44 @@
+{
+    "hash": [
+        {
+            "tag": "h3",
+            "attributes": {
+                "class": "status-name"
+            },
+            "content": "hash <span class=\"mobile-unfriendly\">permanence</span>"
+        },
+        {
+            "tag": "img",
+            "attributes": {
+                "class": "status-image"
+            }
+        },
+        {
+            "tag": "p",
+            "attributes": {
+                "class": "status-state"
+            }
+        }
+    ],
+    "signature": [
+        {
+            "tag": "h3",
+            "attributes": {
+                "class": "status-name"
+            },
+            "content": "<span class=\"mobile-unfriendly\">verified</span> signature"
+        },
+        {
+            "tag": "img",
+            "attributes": {
+                "class": "status-image"
+            }
+        },
+        {
+            "tag": "p",
+            "attributes": {
+                "class": "status-state"
+            }
+        }
+    ]
+}

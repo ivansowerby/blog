@@ -1,0 +1,57 @@
+{
+    "checking": {
+        "status-image": {
+            "attributes": {
+                "src": "img/autorenew_FILL1_wght400_GRAD200_opsz48.svg"
+            },
+            "style": {
+                "animation": "spin 1s infinite"
+            }
+        },
+        "": {
+            "style": {
+                "border-color": "white"
+            }
+        }
+    },
+    "valid": {
+        "status-image": {
+            "attributes": {
+                "src": "img/verified_FILL1_wght400_GRAD200_opsz48.svg"
+            },
+            "style": {
+                "animation": "none"
+            }
+        },
+        "": {
+            "style": {
+                "border-color": "green"
+            }
+        },
+        "status-state": {
+            "style": {
+                "color": "green"
+            }
+        }
+    },
+    "invalid": {
+        "status-image": {
+            "attributes": {
+                "src": "img/error_FILL1_wght700_GRAD200_opsz48.svg"
+            },
+            "style": {
+                "animation": "none"
+            }
+        },
+        "": {
+            "style": {
+                "border-color": "red"
+            }
+        },
+        "status-state": {
+            "style": {
+                "color": "red"
+            }
+        }
+    } 
+}

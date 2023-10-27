@@ -1,4 +1,4 @@
-$().ready(() => {
+$(window).ready(() => {
     const libraryPlan = new LibraryPlan();
     libraryPlan.load().then((libraryPlan) => {
         for(const bookProperties of libraryPlan.reverse()) {

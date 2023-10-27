@@ -1,4 +1,4 @@
-$().ready(() => {
+$(window).ready(() => {
     //icon button
     const baseURL = getBaseUrl();
     

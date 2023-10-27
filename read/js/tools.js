@@ -1,4 +1,4 @@
-$().ready(() => {
+$(window).ready(() => {
     //back button
     const blogURL = getBlogUrl();
 

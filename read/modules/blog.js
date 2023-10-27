@@ -1,6 +1,6 @@
 import * as crypto from "../../modules/crypto.js";
 
-$().ready(() => {
+$(window).ready(() => {
     const blogContainer = $(".blog-container");
     const blogItem = addChild(blogContainer, "div", "blog-item");
     

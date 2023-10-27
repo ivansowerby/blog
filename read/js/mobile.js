@@ -1,4 +1,4 @@
-$().ready(() => {
+$(window).ready(() => {
     async function mobilePromise() {
         return await $.getJSON("json/mobile.json").then((obj) => {
             const unfriendly = obj["unfriendly"];

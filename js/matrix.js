@@ -1,7 +1,7 @@
 const fontSize = 100;
 const fontFamily = "Space Grotesk";
 
-$().ready(() => {
+$(window).ready(() => {
     const canvas = $("#background");
 
     const matrix = new Matrix(canvas);

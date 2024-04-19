@@ -33,9 +33,9 @@ class Translator:
             if len(l) == 0: break
             i = min(l)
             delimiter = blog.find('](', i)
-            j = blog.find(')', delimiter)
+            j = blog.find('\n', delimiter)
             if j == -1 or j > blog.find('\n', delimiter): continue
-            token = blog[i:j+1]
+            token = blog[i:j]
             flag = extract_enclosed(token, '[', ']')[0]
             if not(len(flag) > 2 and flag[:2] == '--' and flag[2:] in self.flags): continue
             flag = flag[2:]
@@ -44,7 +44,7 @@ class Translator:
             try:
                 custom_method = eval(custom_method_name)
                 replacement = custom_method(flag, data)
-                blog = blog[:i] + replacement + blog[j+1:]
+                blog = blog[:i] + replacement + blog[j:]
             except Exception as e:
                 print(e)
             i += 1

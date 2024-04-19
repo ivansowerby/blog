@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
     --background-color: #202020;
@@ -178,8 +178,9 @@ img {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-family: 'Gelasio', sans-serif;
+    font-weight: 100;
 }
 
 .blog-item {
@@ -191,6 +192,25 @@ img {
     box-sizing: border-box;
     border: solid white 2px;
     border-radius: 15px;
+}
+
+.blog-item a {
+    padding: 1px;
+    padding-inline: 2px;
+    color: white;
+    background-color: var(--background-color);
+    outline: solid white 1px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.blog-item a:hover {
+    color: black;
+    background-color: white;
+}
+
+.blog-item ul {
+    text-align: left;
 }
 
 .top-blog-item {
@@ -228,13 +248,15 @@ img {
     filter: contrast(1) invert(1);
 }
 
-.giphy {
+/*Custom Translators*/
+
+.blog-item > .giphy {
     padding: 0;
     width: 100%;
     overflow: hidden;
 }
 
-.giphy > iframe {
+.blog-item > .giphy > iframe {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -244,6 +266,19 @@ img {
     border-radius: 10px;
 }
 
+.blog-item > .box {
+    margin-inline: auto;
+    width: fit-content;
+    padding: 2px;
+    padding-inline: 4px;
+    text-align: left;
+    color: white;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+/*##################*/
+
 .content-container {
     position: fixed;
     right: 0;
@@ -251,11 +286,14 @@ img {
     padding: 10px;
     max-width: 300px;
     width: fit-content;
+    max-height: 100%;
     display: none;
     flex-direction: column;
     row-gap: 5px;
     background-color: #101010;
     border-radius: 0 15px 15px 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .content-container > .heading {
@@ -311,6 +349,7 @@ img {
 
 .fragment-item > .heading-prefix {
     color: #606060;
+    letter-spacing: 2px;
 }
 
 .fragment-item > .heading {

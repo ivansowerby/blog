@@ -15,6 +15,14 @@
             "blurb": "A case for the future",
             "timestamp": 1694862375.9989746,
             "hash": "a91c51821535ee1ef9149f6122307a7833a05a3b9b3afa53a5eea6fa63655868"
+        },
+        {
+            "filepath": "../../library/sentience.out.md",
+            "title": "Artificial Sentience",
+            "author": "Ivan Sowerby",
+            "blurb": "Thoughts on Artificial General Intelligence (AGI) as the final invention of man, discussing definitions, debates, and various perspectives on the timelines and takeoffs of AGI and Artificial Super-Intelligence (ASI)",
+            "timestamp": 1711911600.0000000,
+            "hash": "279820b4f5116df93e884f619c7b5f3eea17892455ffc1da4f266c8541df7f3e"
         }
     ]
 }

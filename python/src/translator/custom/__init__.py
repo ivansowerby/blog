@@ -3,6 +3,10 @@ from util.path import join_path, PATH_SELECTORS, DOT_SELECTOR
 from util.string import split_by
 from util.html import wrap
 
+def script_translator(flag: str, url: str) -> str:
+    script_element = wrap('script', attributes = {'src': url})
+    return script_element
+
 def giphy_translator(flag: str, url: str) -> Optional[str]:
     by = lambda s, selector: s.find(selector, max(s.find(DOT_SELECTOR), 0))
     split_url = split_by(url, PATH_SELECTORS, by)
@@ -12,7 +16,11 @@ def giphy_translator(flag: str, url: str) -> Optional[str]:
     (alt, _id) = (None, split_segment[-1])
     if len(split_segment) == 2: alt = split_segment[0]
     embed_url = join_path(host, 'embed', _id)
-    iframe_element = wrap('iframe', '', attributes = {"id": _id, "src": embed_url, "alt": alt})
+    iframe_element = wrap('iframe', '', attributes = {'id': _id, 'src': embed_url, 'alt': alt})
     hash = flag
-    div_element = wrap('div', iframe_element, attributes = {"class": hash})
+    div_element = wrap('div', iframe_element, attributes = {'class': hash})
+    return div_element
+
+def box_translator(flag: str, children: str) -> str:
+    div_element = wrap('div', children, attributes = {'class': 'box'})
     return div_element

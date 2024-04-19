@@ -38,12 +38,23 @@ def __until__(s: str, selectors: Union[tuple[str], list[str], str], _range: Unio
 def count_all(s: str, selectors: Union[tuple[str], list[str]]) -> int:
     return sum([s.count(selector) for selector in selectors])
 
+def find_inescapable(s: str, p: str, i: int) -> int:
+    while True:
+        i = s.find(p, i)
+        if i == -1: return -1
+        if i > 0 and s[i-1] == '\\':
+            i += 1
+            continue
+        return i
+
 def extract_enclosed(s: str, prefix: str, suffix: str) -> list[tuple]:
     l = []
     i = -1
-    for _ in range(s.count(prefix)):
-        i = s.find(prefix, i + 1)
+    while True:
+        i = find_inescapable(s, prefix, i + 1)
+        if i == -1: break
         i += 1
-        j = s.find(suffix, i)
+        j = find_inescapable(s, suffix, i)
+        if j == -1: break
         l.append(s[i:j])
     return l

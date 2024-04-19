@@ -1,7 +1,7 @@
 [openai]
-model = "gpt-3.5-turbo-16k"
+model = "gpt-3.5-turbo-0125"
 max-tokens = 16384
-api-key = "YOUR_API_KEY"
+api-key = "<YOUR_API_KEY>"
 
 [openai.preference]
 #For deciding which version of the blog will be "fed" into the (OpenAI) AI model (for description), useful to save tokens or gain extra descriptive data!

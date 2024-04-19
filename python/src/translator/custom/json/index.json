@@ -1,5 +1,7 @@
 {
     "flags": {
-        "giphy": "giphy_translator"
+        "script": "script_translator",
+        "giphy": "giphy_translator",
+        "box": "box_translator"
     }
 }

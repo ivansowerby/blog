@@ -2,6 +2,8 @@
     "flags": {
         "script": "script_translator",
         "giphy": "giphy_translator",
-        "box": "box_translator"
+        "box": "box_translator",
+        "image": "image_translator",
+        "list": "list_translator"
     }
 }

@@ -196,11 +196,11 @@ img {
 
 .blog-item a {
     padding: 1px;
-    padding-inline: 2px;
+    padding-inline: 3px;
     color: white;
     background-color: var(--background-color);
     outline: solid white 1px;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
 }
 
@@ -248,6 +248,16 @@ img {
     filter: contrast(1) invert(1);
 }
 
+.blog-item h1 {
+    text-decoration: underline;
+}
+
+.blog-item blockquote {
+    padding: 5px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
 /*Custom Translators*/
 
 .blog-item > .giphy {
@@ -266,11 +276,10 @@ img {
     border-radius: 10px;
 }
 
-.blog-item > .box {
+.blog-item > .box, .blog-item .image {
     margin-inline: auto;
     width: fit-content;
-    padding: 2px;
-    padding-inline: 4px;
+    padding: 4px;
     text-align: left;
     color: white;
     background-color: var(--background-color);
@@ -293,7 +302,7 @@ img {
     background-color: #101010;
     border-radius: 0 15px 15px 0;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .content-container > .heading {

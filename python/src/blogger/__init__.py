@@ -95,5 +95,3 @@ class Blogger:
             json_dump(vars(library), file, indent = indent)
 
         return destination_path
-
-

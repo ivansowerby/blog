@@ -1,6 +1,6 @@
 [openai]
-model = "gpt-3.5-turbo-0125"
-max-tokens = 16384
+model = "gpt-4o"
+max-tokens = 128000
 api-key = "<YOUR_API_KEY>"
 
 [openai.preference]

@@ -30,7 +30,7 @@ $(window).ready(() => {
                 hashStatus = VALID_STATUS;
             }
             setStatus(hashStatus, "hash");
-
+            
             //signature
             const [signature, publicKey] = [window.blog["signature"], window.blog["public-key"]];
             let signatureStatus = INVALID_STATUS;
